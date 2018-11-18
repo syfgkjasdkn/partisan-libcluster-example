@@ -23,3 +23,5 @@ erl_crash.dump
 partisan_cluster-*.tar
 
 .DS_Store
+.log
+.elixir_ls
