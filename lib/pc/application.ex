@@ -8,7 +8,7 @@ defmodule PC.Application do
         raise(ArgumentError, "need libcluster.topologies")
 
     children = [
-      # {Cluster.Supervisor, [topologies, [name: PC.Cluster.Supervisor]]}
+      {Cluster.Supervisor, [topologies, [name: PC.Cluster.Supervisor]]}
     ]
 
     opts = [strategy: :one_for_one, name: PC.Supervisor]
