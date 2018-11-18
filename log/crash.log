@@ -2208,3 +2208,462 @@
      Reason:     {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"Elixir.PC.list_nodes/0 is undefined!">>},[{'Elixir.Cluster.Strategy','ensure_exported!',3,[{file,"lib/strategy/strategy.ex"},{line,156}]},{'Elixir.Cluster.Strategy',connect_nodes,4,[{file,"lib/strategy/strategy.ex"},{line,40}]},{'Elixir.Cluster.Strategy.Gossip',handle_heartbeat,2,[{file,"lib/strategy/gossip.ex"},{line,198}]},{'Elixir.Cluster.Strategy.Gossip',handle_info,2,[{file,"lib/strategy/gossip.ex"},{line,140}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
      Offender:   [{pid,<0.320.0>},{id,'Elixir.Cluster.Strategy.Gossip'},{mfargs,{'Elixir.Cluster.Strategy.Gossip',start_link,[[#{'__struct__' => 'Elixir.Cluster.Strategy.State',config => [],connect => {'Elixir.PC',connect_node,[]},disconnect => {'Elixir.PC',disconnect_node,[]},list_nodes => {'Elixir.PC',list_nodes,[]},meta => nil,topology => example}]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
 
+2018-11-18 21:30:48 =ERROR REPORT====
+** Generic server <0.314.0> terminating 
+** Last message in was {udp,#Port<0.11>,{192,168,1,38},45892,<<104,101,97,114,116,98,101,97,116,58,58,131,116,0,0,0,1,100,0,4,110,111,100,101,100,0,10,97,108,105,99,101,64,109,97,99,50>>}
+** When Server state == #{'__struct__' => 'Elixir.Cluster.Strategy.State',config => [],connect => {'Elixir.PC',connect_node,[]},disconnect => {'Elixir.PC',disconnect_node,[]},list_nodes => {'Elixir.PC',list_nodes,[]},meta => {{230,1,1,251},45892,#Port<0.11>,nil},topology => example}
+** Reason for termination == 
+** {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"Elixir.PC.list_nodes/0 is undefined!">>},[{'Elixir.Cluster.Strategy','ensure_exported!',3,[{file,"lib/strategy/strategy.ex"},{line,156}]},{'Elixir.Cluster.Strategy',connect_nodes,4,[{file,"lib/strategy/strategy.ex"},{line,40}]},{'Elixir.Cluster.Strategy.Gossip',handle_heartbeat,2,[{file,"lib/strategy/gossip.ex"},{line,198}]},{'Elixir.Cluster.Strategy.Gossip',handle_info,2,[{file,"lib/strategy/gossip.ex"},{line,140}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2018-11-18 21:30:48 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Cluster.Strategy.Gossip:init/1
+    pid: <0.314.0>
+    registered_name: []
+    exception error: {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"Elixir.PC.list_nodes/0 is undefined!">>},[{'Elixir.Cluster.Strategy','ensure_exported!',3,[{file,"lib/strategy/strategy.ex"},{line,156}]},{'Elixir.Cluster.Strategy',connect_nodes,4,[{file,"lib/strategy/strategy.ex"},{line,40}]},{'Elixir.Cluster.Strategy.Gossip',handle_heartbeat,2,[{file,"lib/strategy/gossip.ex"},{line,198}]},{'Elixir.Cluster.Strategy.Gossip',handle_info,2,[{file,"lib/strategy/gossip.ex"},{line,140}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: ['Elixir.PC.Cluster.Supervisor','Elixir.PC.Supervisor',<0.311.0>]
+    message_queue_len: 1
+    messages: [{udp,#Port<0.11>,{192,168,1,38},45892,<<104,101,97,114,116,98,101,97,116,58,58,131,116,0,0,0,1,100,0,4,110,111,100,101,100,0,10,97,108,105,99,101,64,109,97,99,50>>}]
+    links: [<0.313.0>,#Port<0.11>]
+    dictionary: [{rand_seed,{#{bits => 58,jump => #Fun<rand.8.10897371>,next => #Fun<rand.5.10897371>,type => exrop,uniform => #Fun<rand.6.10897371>,uniform_n => #Fun<rand.7.10897371>,weak_low_bits => 1},[46621572878972940|206485390587063405]}}]
+    trap_exit: false
+    status: running
+    heap_size: 6772
+    stack_size: 27
+    reductions: 201383
+  neighbours:
+2018-11-18 21:30:48 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.PC.Cluster.Supervisor'}
+     Context:    child_terminated
+     Reason:     {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"Elixir.PC.list_nodes/0 is undefined!">>},[{'Elixir.Cluster.Strategy','ensure_exported!',3,[{file,"lib/strategy/strategy.ex"},{line,156}]},{'Elixir.Cluster.Strategy',connect_nodes,4,[{file,"lib/strategy/strategy.ex"},{line,40}]},{'Elixir.Cluster.Strategy.Gossip',handle_heartbeat,2,[{file,"lib/strategy/gossip.ex"},{line,198}]},{'Elixir.Cluster.Strategy.Gossip',handle_info,2,[{file,"lib/strategy/gossip.ex"},{line,140}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+     Offender:   [{pid,<0.314.0>},{id,'Elixir.Cluster.Strategy.Gossip'},{mfargs,{'Elixir.Cluster.Strategy.Gossip',start_link,[[#{'__struct__' => 'Elixir.Cluster.Strategy.State',config => [],connect => {'Elixir.PC',connect_node,[]},disconnect => {'Elixir.PC',disconnect_node,[]},list_nodes => {'Elixir.PC',list_nodes,[]},meta => nil,topology => example}]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2018-11-18 21:30:51 =ERROR REPORT====
+** Generic server <0.324.0> terminating 
+** Last message in was {udp,#Port<0.17>,{192,168,1,38},45892,<<104,101,97,114,116,98,101,97,116,58,58,131,116,0,0,0,1,100,0,4,110,111,100,101,100,0,10,97,108,105,99,101,64,109,97,99,50>>}
+** When Server state == #{'__struct__' => 'Elixir.Cluster.Strategy.State',config => [],connect => {'Elixir.PC',connect_node,[]},disconnect => {'Elixir.PC',disconnect_node,[]},list_nodes => {'Elixir.PC',list_nodes,[]},meta => {{230,1,1,251},45892,#Port<0.17>,nil},topology => example}
+** Reason for termination == 
+** {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"Elixir.PC.list_nodes/0 is undefined!">>},[{'Elixir.Cluster.Strategy','ensure_exported!',3,[{file,"lib/strategy/strategy.ex"},{line,156}]},{'Elixir.Cluster.Strategy',connect_nodes,4,[{file,"lib/strategy/strategy.ex"},{line,40}]},{'Elixir.Cluster.Strategy.Gossip',handle_heartbeat,2,[{file,"lib/strategy/gossip.ex"},{line,198}]},{'Elixir.Cluster.Strategy.Gossip',handle_info,2,[{file,"lib/strategy/gossip.ex"},{line,140}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2018-11-18 21:30:51 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Cluster.Strategy.Gossip:init/1
+    pid: <0.324.0>
+    registered_name: []
+    exception error: {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"Elixir.PC.list_nodes/0 is undefined!">>},[{'Elixir.Cluster.Strategy','ensure_exported!',3,[{file,"lib/strategy/strategy.ex"},{line,156}]},{'Elixir.Cluster.Strategy',connect_nodes,4,[{file,"lib/strategy/strategy.ex"},{line,40}]},{'Elixir.Cluster.Strategy.Gossip',handle_heartbeat,2,[{file,"lib/strategy/gossip.ex"},{line,198}]},{'Elixir.Cluster.Strategy.Gossip',handle_info,2,[{file,"lib/strategy/gossip.ex"},{line,140}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: ['Elixir.PC.Cluster.Supervisor','Elixir.PC.Supervisor',<0.311.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.313.0>,#Port<0.17>]
+    dictionary: [{rand_seed,{#{bits => 58,jump => #Fun<rand.8.10897371>,next => #Fun<rand.5.10897371>,type => exrop,uniform => #Fun<rand.6.10897371>,uniform_n => #Fun<rand.7.10897371>,weak_low_bits => 1},[221993784390543362|99698076455951064]}}]
+    trap_exit: false
+    status: running
+    heap_size: 6772
+    stack_size: 27
+    reductions: 189016
+  neighbours:
+2018-11-18 21:30:51 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.PC.Cluster.Supervisor'}
+     Context:    child_terminated
+     Reason:     {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"Elixir.PC.list_nodes/0 is undefined!">>},[{'Elixir.Cluster.Strategy','ensure_exported!',3,[{file,"lib/strategy/strategy.ex"},{line,156}]},{'Elixir.Cluster.Strategy',connect_nodes,4,[{file,"lib/strategy/strategy.ex"},{line,40}]},{'Elixir.Cluster.Strategy.Gossip',handle_heartbeat,2,[{file,"lib/strategy/gossip.ex"},{line,198}]},{'Elixir.Cluster.Strategy.Gossip',handle_info,2,[{file,"lib/strategy/gossip.ex"},{line,140}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+     Offender:   [{pid,<0.324.0>},{id,'Elixir.Cluster.Strategy.Gossip'},{mfargs,{'Elixir.Cluster.Strategy.Gossip',start_link,[[#{'__struct__' => 'Elixir.Cluster.Strategy.State',config => [],connect => {'Elixir.PC',connect_node,[]},disconnect => {'Elixir.PC',disconnect_node,[]},list_nodes => {'Elixir.PC',list_nodes,[]},meta => nil,topology => example}]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2018-11-18 21:30:56 =ERROR REPORT====
+** Generic server <0.325.0> terminating 
+** Last message in was {udp,#Port<0.18>,{192,168,1,38},45892,<<104,101,97,114,116,98,101,97,116,58,58,131,116,0,0,0,1,100,0,4,110,111,100,101,100,0,10,97,108,105,99,101,64,109,97,99,50>>}
+** When Server state == #{'__struct__' => 'Elixir.Cluster.Strategy.State',config => [],connect => {'Elixir.PC',connect_node,[]},disconnect => {'Elixir.PC',disconnect_node,[]},list_nodes => {'Elixir.PC',list_nodes,[]},meta => {{230,1,1,251},45892,#Port<0.18>,nil},topology => example}
+** Reason for termination == 
+** {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"Elixir.PC.list_nodes/0 is undefined!">>},[{'Elixir.Cluster.Strategy','ensure_exported!',3,[{file,"lib/strategy/strategy.ex"},{line,156}]},{'Elixir.Cluster.Strategy',connect_nodes,4,[{file,"lib/strategy/strategy.ex"},{line,40}]},{'Elixir.Cluster.Strategy.Gossip',handle_heartbeat,2,[{file,"lib/strategy/gossip.ex"},{line,198}]},{'Elixir.Cluster.Strategy.Gossip',handle_info,2,[{file,"lib/strategy/gossip.ex"},{line,140}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2018-11-18 21:30:56 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Cluster.Strategy.Gossip:init/1
+    pid: <0.325.0>
+    registered_name: []
+    exception error: {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"Elixir.PC.list_nodes/0 is undefined!">>},[{'Elixir.Cluster.Strategy','ensure_exported!',3,[{file,"lib/strategy/strategy.ex"},{line,156}]},{'Elixir.Cluster.Strategy',connect_nodes,4,[{file,"lib/strategy/strategy.ex"},{line,40}]},{'Elixir.Cluster.Strategy.Gossip',handle_heartbeat,2,[{file,"lib/strategy/gossip.ex"},{line,198}]},{'Elixir.Cluster.Strategy.Gossip',handle_info,2,[{file,"lib/strategy/gossip.ex"},{line,140}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: ['Elixir.PC.Cluster.Supervisor','Elixir.PC.Supervisor',<0.311.0>]
+    message_queue_len: 1
+    messages: [{udp,#Port<0.18>,{192,168,1,38},45892,<<104,101,97,114,116,98,101,97,116,58,58,131,116,0,0,0,1,100,0,4,110,111,100,101,100,0,10,97,108,105,99,101,64,109,97,99,50>>}]
+    links: [<0.313.0>,#Port<0.18>]
+    dictionary: [{rand_seed,{#{bits => 58,jump => #Fun<rand.8.10897371>,next => #Fun<rand.5.10897371>,type => exrop,uniform => #Fun<rand.6.10897371>,uniform_n => #Fun<rand.7.10897371>,weak_low_bits => 1},[75326907361644748|219131009605760660]}}]
+    trap_exit: false
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 192852
+  neighbours:
+2018-11-18 21:30:56 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.PC.Cluster.Supervisor'}
+     Context:    child_terminated
+     Reason:     {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"Elixir.PC.list_nodes/0 is undefined!">>},[{'Elixir.Cluster.Strategy','ensure_exported!',3,[{file,"lib/strategy/strategy.ex"},{line,156}]},{'Elixir.Cluster.Strategy',connect_nodes,4,[{file,"lib/strategy/strategy.ex"},{line,40}]},{'Elixir.Cluster.Strategy.Gossip',handle_heartbeat,2,[{file,"lib/strategy/gossip.ex"},{line,198}]},{'Elixir.Cluster.Strategy.Gossip',handle_info,2,[{file,"lib/strategy/gossip.ex"},{line,140}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+     Offender:   [{pid,<0.325.0>},{id,'Elixir.Cluster.Strategy.Gossip'},{mfargs,{'Elixir.Cluster.Strategy.Gossip',start_link,[[#{'__struct__' => 'Elixir.Cluster.Strategy.State',config => [],connect => {'Elixir.PC',connect_node,[]},disconnect => {'Elixir.PC',disconnect_node,[]},list_nodes => {'Elixir.PC',list_nodes,[]},meta => nil,topology => example}]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2018-11-18 21:30:56 =ERROR REPORT====
+** Generic server <0.327.0> terminating 
+** Last message in was {udp,#Port<0.19>,{192,168,1,38},45892,<<104,101,97,114,116,98,101,97,116,58,58,131,116,0,0,0,1,100,0,4,110,111,100,101,100,0,10,97,108,105,99,101,64,109,97,99,50>>}
+** When Server state == #{'__struct__' => 'Elixir.Cluster.Strategy.State',config => [],connect => {'Elixir.PC',connect_node,[]},disconnect => {'Elixir.PC',disconnect_node,[]},list_nodes => {'Elixir.PC',list_nodes,[]},meta => {{230,1,1,251},45892,#Port<0.19>,nil},topology => example}
+** Reason for termination == 
+** {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"Elixir.PC.list_nodes/0 is undefined!">>},[{'Elixir.Cluster.Strategy','ensure_exported!',3,[{file,"lib/strategy/strategy.ex"},{line,156}]},{'Elixir.Cluster.Strategy',connect_nodes,4,[{file,"lib/strategy/strategy.ex"},{line,40}]},{'Elixir.Cluster.Strategy.Gossip',handle_heartbeat,2,[{file,"lib/strategy/gossip.ex"},{line,198}]},{'Elixir.Cluster.Strategy.Gossip',handle_info,2,[{file,"lib/strategy/gossip.ex"},{line,140}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2018-11-18 21:30:56 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Cluster.Strategy.Gossip:init/1
+    pid: <0.327.0>
+    registered_name: []
+    exception error: {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"Elixir.PC.list_nodes/0 is undefined!">>},[{'Elixir.Cluster.Strategy','ensure_exported!',3,[{file,"lib/strategy/strategy.ex"},{line,156}]},{'Elixir.Cluster.Strategy',connect_nodes,4,[{file,"lib/strategy/strategy.ex"},{line,40}]},{'Elixir.Cluster.Strategy.Gossip',handle_heartbeat,2,[{file,"lib/strategy/gossip.ex"},{line,198}]},{'Elixir.Cluster.Strategy.Gossip',handle_info,2,[{file,"lib/strategy/gossip.ex"},{line,140}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: ['Elixir.PC.Cluster.Supervisor','Elixir.PC.Supervisor',<0.311.0>]
+    message_queue_len: 1
+    messages: [{udp,#Port<0.19>,{192,168,1,38},45892,<<104,101,97,114,116,98,101,97,116,58,58,131,116,0,0,0,1,100,0,4,110,111,100,101,100,0,10,97,108,105,99,101,64,109,97,99,50>>}]
+    links: [<0.313.0>,#Port<0.19>]
+    dictionary: [{rand_seed,{#{bits => 58,jump => #Fun<rand.8.10897371>,next => #Fun<rand.5.10897371>,type => exrop,uniform => #Fun<rand.6.10897371>,uniform_n => #Fun<rand.7.10897371>,weak_low_bits => 1},[174929351530335761|86342128773812194]}}]
+    trap_exit: false
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 188852
+  neighbours:
+2018-11-18 21:30:56 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.PC.Cluster.Supervisor'}
+     Context:    child_terminated
+     Reason:     {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"Elixir.PC.list_nodes/0 is undefined!">>},[{'Elixir.Cluster.Strategy','ensure_exported!',3,[{file,"lib/strategy/strategy.ex"},{line,156}]},{'Elixir.Cluster.Strategy',connect_nodes,4,[{file,"lib/strategy/strategy.ex"},{line,40}]},{'Elixir.Cluster.Strategy.Gossip',handle_heartbeat,2,[{file,"lib/strategy/gossip.ex"},{line,198}]},{'Elixir.Cluster.Strategy.Gossip',handle_info,2,[{file,"lib/strategy/gossip.ex"},{line,140}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+     Offender:   [{pid,<0.327.0>},{id,'Elixir.Cluster.Strategy.Gossip'},{mfargs,{'Elixir.Cluster.Strategy.Gossip',start_link,[[#{'__struct__' => 'Elixir.Cluster.Strategy.State',config => [],connect => {'Elixir.PC',connect_node,[]},disconnect => {'Elixir.PC',disconnect_node,[]},list_nodes => {'Elixir.PC',list_nodes,[]},meta => nil,topology => example}]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2018-11-18 21:31:00 =ERROR REPORT====
+** Generic server <0.328.0> terminating 
+** Last message in was {udp,#Port<0.20>,{192,168,1,38},45892,<<104,101,97,114,116,98,101,97,116,58,58,131,116,0,0,0,1,100,0,4,110,111,100,101,100,0,10,97,108,105,99,101,64,109,97,99,50>>}
+** When Server state == #{'__struct__' => 'Elixir.Cluster.Strategy.State',config => [],connect => {'Elixir.PC',connect_node,[]},disconnect => {'Elixir.PC',disconnect_node,[]},list_nodes => {'Elixir.PC',list_nodes,[]},meta => {{230,1,1,251},45892,#Port<0.20>,nil},topology => example}
+** Reason for termination == 
+** {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"Elixir.PC.list_nodes/0 is undefined!">>},[{'Elixir.Cluster.Strategy','ensure_exported!',3,[{file,"lib/strategy/strategy.ex"},{line,156}]},{'Elixir.Cluster.Strategy',connect_nodes,4,[{file,"lib/strategy/strategy.ex"},{line,40}]},{'Elixir.Cluster.Strategy.Gossip',handle_heartbeat,2,[{file,"lib/strategy/gossip.ex"},{line,198}]},{'Elixir.Cluster.Strategy.Gossip',handle_info,2,[{file,"lib/strategy/gossip.ex"},{line,140}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2018-11-18 21:31:00 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Cluster.Strategy.Gossip:init/1
+    pid: <0.328.0>
+    registered_name: []
+    exception error: {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"Elixir.PC.list_nodes/0 is undefined!">>},[{'Elixir.Cluster.Strategy','ensure_exported!',3,[{file,"lib/strategy/strategy.ex"},{line,156}]},{'Elixir.Cluster.Strategy',connect_nodes,4,[{file,"lib/strategy/strategy.ex"},{line,40}]},{'Elixir.Cluster.Strategy.Gossip',handle_heartbeat,2,[{file,"lib/strategy/gossip.ex"},{line,198}]},{'Elixir.Cluster.Strategy.Gossip',handle_info,2,[{file,"lib/strategy/gossip.ex"},{line,140}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: ['Elixir.PC.Cluster.Supervisor','Elixir.PC.Supervisor',<0.311.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.313.0>,#Port<0.20>]
+    dictionary: [{rand_seed,{#{bits => 58,jump => #Fun<rand.8.10897371>,next => #Fun<rand.5.10897371>,type => exrop,uniform => #Fun<rand.6.10897371>,uniform_n => #Fun<rand.7.10897371>,weak_low_bits => 1},[125883879118159347|148334657575241133]}}]
+    trap_exit: false
+    status: running
+    heap_size: 6772
+    stack_size: 27
+    reductions: 189016
+  neighbours:
+2018-11-18 21:31:00 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.PC.Cluster.Supervisor'}
+     Context:    child_terminated
+     Reason:     {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"Elixir.PC.list_nodes/0 is undefined!">>},[{'Elixir.Cluster.Strategy','ensure_exported!',3,[{file,"lib/strategy/strategy.ex"},{line,156}]},{'Elixir.Cluster.Strategy',connect_nodes,4,[{file,"lib/strategy/strategy.ex"},{line,40}]},{'Elixir.Cluster.Strategy.Gossip',handle_heartbeat,2,[{file,"lib/strategy/gossip.ex"},{line,198}]},{'Elixir.Cluster.Strategy.Gossip',handle_info,2,[{file,"lib/strategy/gossip.ex"},{line,140}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+     Offender:   [{pid,<0.328.0>},{id,'Elixir.Cluster.Strategy.Gossip'},{mfargs,{'Elixir.Cluster.Strategy.Gossip',start_link,[[#{'__struct__' => 'Elixir.Cluster.Strategy.State',config => [],connect => {'Elixir.PC',connect_node,[]},disconnect => {'Elixir.PC',disconnect_node,[]},list_nodes => {'Elixir.PC',list_nodes,[]},meta => nil,topology => example}]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2018-11-18 21:31:00 =ERROR REPORT====
+** Generic server <0.329.0> terminating 
+** Last message in was {udp,#Port<0.21>,{192,168,1,38},45892,<<104,101,97,114,116,98,101,97,116,58,58,131,116,0,0,0,1,100,0,4,110,111,100,101,100,0,10,97,108,105,99,101,64,109,97,99,50>>}
+** When Server state == #{'__struct__' => 'Elixir.Cluster.Strategy.State',config => [],connect => {'Elixir.PC',connect_node,[]},disconnect => {'Elixir.PC',disconnect_node,[]},list_nodes => {'Elixir.PC',list_nodes,[]},meta => {{230,1,1,251},45892,#Port<0.21>,nil},topology => example}
+** Reason for termination == 
+** {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"Elixir.PC.list_nodes/0 is undefined!">>},[{'Elixir.Cluster.Strategy','ensure_exported!',3,[{file,"lib/strategy/strategy.ex"},{line,156}]},{'Elixir.Cluster.Strategy',connect_nodes,4,[{file,"lib/strategy/strategy.ex"},{line,40}]},{'Elixir.Cluster.Strategy.Gossip',handle_heartbeat,2,[{file,"lib/strategy/gossip.ex"},{line,198}]},{'Elixir.Cluster.Strategy.Gossip',handle_info,2,[{file,"lib/strategy/gossip.ex"},{line,140}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2018-11-18 21:31:00 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Cluster.Strategy.Gossip:init/1
+    pid: <0.329.0>
+    registered_name: []
+    exception error: {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"Elixir.PC.list_nodes/0 is undefined!">>},[{'Elixir.Cluster.Strategy','ensure_exported!',3,[{file,"lib/strategy/strategy.ex"},{line,156}]},{'Elixir.Cluster.Strategy',connect_nodes,4,[{file,"lib/strategy/strategy.ex"},{line,40}]},{'Elixir.Cluster.Strategy.Gossip',handle_heartbeat,2,[{file,"lib/strategy/gossip.ex"},{line,198}]},{'Elixir.Cluster.Strategy.Gossip',handle_info,2,[{file,"lib/strategy/gossip.ex"},{line,140}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: ['Elixir.PC.Cluster.Supervisor','Elixir.PC.Supervisor',<0.311.0>]
+    message_queue_len: 1
+    messages: [{udp,#Port<0.21>,{192,168,1,38},45892,<<104,101,97,114,116,98,101,97,116,58,58,131,116,0,0,0,1,100,0,4,110,111,100,101,100,0,8,98,111,98,64,109,97,99,50>>}]
+    links: [<0.313.0>,#Port<0.21>]
+    dictionary: [{rand_seed,{#{bits => 58,jump => #Fun<rand.8.10897371>,next => #Fun<rand.5.10897371>,type => exrop,uniform => #Fun<rand.6.10897371>,uniform_n => #Fun<rand.7.10897371>,weak_low_bits => 1},[218281307801603267|40168895728467200]}}]
+    trap_exit: false
+    status: running
+    heap_size: 6772
+    stack_size: 27
+    reductions: 188836
+  neighbours:
+2018-11-18 21:31:00 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.PC.Cluster.Supervisor'}
+     Context:    child_terminated
+     Reason:     {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"Elixir.PC.list_nodes/0 is undefined!">>},[{'Elixir.Cluster.Strategy','ensure_exported!',3,[{file,"lib/strategy/strategy.ex"},{line,156}]},{'Elixir.Cluster.Strategy',connect_nodes,4,[{file,"lib/strategy/strategy.ex"},{line,40}]},{'Elixir.Cluster.Strategy.Gossip',handle_heartbeat,2,[{file,"lib/strategy/gossip.ex"},{line,198}]},{'Elixir.Cluster.Strategy.Gossip',handle_info,2,[{file,"lib/strategy/gossip.ex"},{line,140}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+     Offender:   [{pid,<0.329.0>},{id,'Elixir.Cluster.Strategy.Gossip'},{mfargs,{'Elixir.Cluster.Strategy.Gossip',start_link,[[#{'__struct__' => 'Elixir.Cluster.Strategy.State',config => [],connect => {'Elixir.PC',connect_node,[]},disconnect => {'Elixir.PC',disconnect_node,[]},list_nodes => {'Elixir.PC',list_nodes,[]},meta => nil,topology => example}]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2018-11-18 21:31:00 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.PC.Cluster.Supervisor'}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.329.0>},{id,'Elixir.Cluster.Strategy.Gossip'},{mfargs,{'Elixir.Cluster.Strategy.Gossip',start_link,[[#{'__struct__' => 'Elixir.Cluster.Strategy.State',config => [],connect => {'Elixir.PC',connect_node,[]},disconnect => {'Elixir.PC',disconnect_node,[]},list_nodes => {'Elixir.PC',list_nodes,[]},meta => nil,topology => example}]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2018-11-18 21:31:00 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.PC.Supervisor'}
+     Context:    child_terminated
+     Reason:     shutdown
+     Offender:   [{pid,<0.313.0>},{id,'Elixir.Cluster.Supervisor'},{mfargs,{'Elixir.Cluster.Supervisor',start_link,[[[{example,[{strategy,'Elixir.Cluster.Strategy.Gossip'},{connect,{'Elixir.PC',connect_node,[]}},{disconnect,{'Elixir.PC',disconnect_node,[]}},{list_nodes,{'Elixir.PC',list_nodes,[]}}]}],[{name,'Elixir.PC.Cluster.Supervisor'}]]]}},{restart_type,permanent},{shutdown,infinity},{child_type,supervisor}]
+
+2018-11-18 21:31:02 =ERROR REPORT====
+** Generic server <0.331.0> terminating 
+** Last message in was {udp,#Port<0.22>,{192,168,1,38},45892,<<104,101,97,114,116,98,101,97,116,58,58,131,116,0,0,0,1,100,0,4,110,111,100,101,100,0,10,97,108,105,99,101,64,109,97,99,50>>}
+** When Server state == #{'__struct__' => 'Elixir.Cluster.Strategy.State',config => [],connect => {'Elixir.PC',connect_node,[]},disconnect => {'Elixir.PC',disconnect_node,[]},list_nodes => {'Elixir.PC',list_nodes,[]},meta => {{230,1,1,251},45892,#Port<0.22>,nil},topology => example}
+** Reason for termination == 
+** {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"Elixir.PC.list_nodes/0 is undefined!">>},[{'Elixir.Cluster.Strategy','ensure_exported!',3,[{file,"lib/strategy/strategy.ex"},{line,156}]},{'Elixir.Cluster.Strategy',connect_nodes,4,[{file,"lib/strategy/strategy.ex"},{line,40}]},{'Elixir.Cluster.Strategy.Gossip',handle_heartbeat,2,[{file,"lib/strategy/gossip.ex"},{line,198}]},{'Elixir.Cluster.Strategy.Gossip',handle_info,2,[{file,"lib/strategy/gossip.ex"},{line,140}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2018-11-18 21:31:02 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Cluster.Strategy.Gossip:init/1
+    pid: <0.331.0>
+    registered_name: []
+    exception error: {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"Elixir.PC.list_nodes/0 is undefined!">>},[{'Elixir.Cluster.Strategy','ensure_exported!',3,[{file,"lib/strategy/strategy.ex"},{line,156}]},{'Elixir.Cluster.Strategy',connect_nodes,4,[{file,"lib/strategy/strategy.ex"},{line,40}]},{'Elixir.Cluster.Strategy.Gossip',handle_heartbeat,2,[{file,"lib/strategy/gossip.ex"},{line,198}]},{'Elixir.Cluster.Strategy.Gossip',handle_info,2,[{file,"lib/strategy/gossip.ex"},{line,140}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: ['Elixir.PC.Cluster.Supervisor','Elixir.PC.Supervisor',<0.311.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.330.0>,#Port<0.22>]
+    dictionary: [{rand_seed,{#{bits => 58,jump => #Fun<rand.8.10897371>,next => #Fun<rand.5.10897371>,type => exrop,uniform => #Fun<rand.6.10897371>,uniform_n => #Fun<rand.7.10897371>,weak_low_bits => 1},[275607725783048392|135473871292883081]}}]
+    trap_exit: false
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 188852
+  neighbours:
+2018-11-18 21:31:02 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.PC.Cluster.Supervisor'}
+     Context:    child_terminated
+     Reason:     {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"Elixir.PC.list_nodes/0 is undefined!">>},[{'Elixir.Cluster.Strategy','ensure_exported!',3,[{file,"lib/strategy/strategy.ex"},{line,156}]},{'Elixir.Cluster.Strategy',connect_nodes,4,[{file,"lib/strategy/strategy.ex"},{line,40}]},{'Elixir.Cluster.Strategy.Gossip',handle_heartbeat,2,[{file,"lib/strategy/gossip.ex"},{line,198}]},{'Elixir.Cluster.Strategy.Gossip',handle_info,2,[{file,"lib/strategy/gossip.ex"},{line,140}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+     Offender:   [{pid,<0.331.0>},{id,'Elixir.Cluster.Strategy.Gossip'},{mfargs,{'Elixir.Cluster.Strategy.Gossip',start_link,[[#{'__struct__' => 'Elixir.Cluster.Strategy.State',config => [],connect => {'Elixir.PC',connect_node,[]},disconnect => {'Elixir.PC',disconnect_node,[]},list_nodes => {'Elixir.PC',list_nodes,[]},meta => nil,topology => example}]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2018-11-18 21:31:07 =ERROR REPORT====
+** Generic server <0.332.0> terminating 
+** Last message in was {udp,#Port<0.23>,{192,168,1,38},45892,<<104,101,97,114,116,98,101,97,116,58,58,131,116,0,0,0,1,100,0,4,110,111,100,101,100,0,10,97,108,105,99,101,64,109,97,99,50>>}
+** When Server state == #{'__struct__' => 'Elixir.Cluster.Strategy.State',config => [],connect => {'Elixir.PC',connect_node,[]},disconnect => {'Elixir.PC',disconnect_node,[]},list_nodes => {'Elixir.PC',list_nodes,[]},meta => {{230,1,1,251},45892,#Port<0.23>,nil},topology => example}
+** Reason for termination == 
+** {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"Elixir.PC.list_nodes/0 is undefined!">>},[{'Elixir.Cluster.Strategy','ensure_exported!',3,[{file,"lib/strategy/strategy.ex"},{line,156}]},{'Elixir.Cluster.Strategy',connect_nodes,4,[{file,"lib/strategy/strategy.ex"},{line,40}]},{'Elixir.Cluster.Strategy.Gossip',handle_heartbeat,2,[{file,"lib/strategy/gossip.ex"},{line,198}]},{'Elixir.Cluster.Strategy.Gossip',handle_info,2,[{file,"lib/strategy/gossip.ex"},{line,140}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2018-11-18 21:31:07 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Cluster.Strategy.Gossip:init/1
+    pid: <0.332.0>
+    registered_name: []
+    exception error: {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"Elixir.PC.list_nodes/0 is undefined!">>},[{'Elixir.Cluster.Strategy','ensure_exported!',3,[{file,"lib/strategy/strategy.ex"},{line,156}]},{'Elixir.Cluster.Strategy',connect_nodes,4,[{file,"lib/strategy/strategy.ex"},{line,40}]},{'Elixir.Cluster.Strategy.Gossip',handle_heartbeat,2,[{file,"lib/strategy/gossip.ex"},{line,198}]},{'Elixir.Cluster.Strategy.Gossip',handle_info,2,[{file,"lib/strategy/gossip.ex"},{line,140}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: ['Elixir.PC.Cluster.Supervisor','Elixir.PC.Supervisor',<0.311.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.330.0>,#Port<0.23>]
+    dictionary: [{rand_seed,{#{bits => 58,jump => #Fun<rand.8.10897371>,next => #Fun<rand.5.10897371>,type => exrop,uniform => #Fun<rand.6.10897371>,uniform_n => #Fun<rand.7.10897371>,weak_low_bits => 1},[54341936054609446|206193626898496389]}}]
+    trap_exit: false
+    status: running
+    heap_size: 6772
+    stack_size: 27
+    reductions: 189483
+  neighbours:
+2018-11-18 21:31:07 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.PC.Cluster.Supervisor'}
+     Context:    child_terminated
+     Reason:     {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"Elixir.PC.list_nodes/0 is undefined!">>},[{'Elixir.Cluster.Strategy','ensure_exported!',3,[{file,"lib/strategy/strategy.ex"},{line,156}]},{'Elixir.Cluster.Strategy',connect_nodes,4,[{file,"lib/strategy/strategy.ex"},{line,40}]},{'Elixir.Cluster.Strategy.Gossip',handle_heartbeat,2,[{file,"lib/strategy/gossip.ex"},{line,198}]},{'Elixir.Cluster.Strategy.Gossip',handle_info,2,[{file,"lib/strategy/gossip.ex"},{line,140}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+     Offender:   [{pid,<0.332.0>},{id,'Elixir.Cluster.Strategy.Gossip'},{mfargs,{'Elixir.Cluster.Strategy.Gossip',start_link,[[#{'__struct__' => 'Elixir.Cluster.Strategy.State',config => [],connect => {'Elixir.PC',connect_node,[]},disconnect => {'Elixir.PC',disconnect_node,[]},list_nodes => {'Elixir.PC',list_nodes,[]},meta => nil,topology => example}]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2018-11-18 21:31:07 =ERROR REPORT====
+** Generic server <0.334.0> terminating 
+** Last message in was {udp,#Port<0.24>,{192,168,1,38},45892,<<104,101,97,114,116,98,101,97,116,58,58,131,116,0,0,0,1,100,0,4,110,111,100,101,100,0,10,97,108,105,99,101,64,109,97,99,50>>}
+** When Server state == #{'__struct__' => 'Elixir.Cluster.Strategy.State',config => [],connect => {'Elixir.PC',connect_node,[]},disconnect => {'Elixir.PC',disconnect_node,[]},list_nodes => {'Elixir.PC',list_nodes,[]},meta => {{230,1,1,251},45892,#Port<0.24>,nil},topology => example}
+** Reason for termination == 
+** {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"Elixir.PC.list_nodes/0 is undefined!">>},[{'Elixir.Cluster.Strategy','ensure_exported!',3,[{file,"lib/strategy/strategy.ex"},{line,156}]},{'Elixir.Cluster.Strategy',connect_nodes,4,[{file,"lib/strategy/strategy.ex"},{line,40}]},{'Elixir.Cluster.Strategy.Gossip',handle_heartbeat,2,[{file,"lib/strategy/gossip.ex"},{line,198}]},{'Elixir.Cluster.Strategy.Gossip',handle_info,2,[{file,"lib/strategy/gossip.ex"},{line,140}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2018-11-18 21:31:07 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Cluster.Strategy.Gossip:init/1
+    pid: <0.334.0>
+    registered_name: []
+    exception error: {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"Elixir.PC.list_nodes/0 is undefined!">>},[{'Elixir.Cluster.Strategy','ensure_exported!',3,[{file,"lib/strategy/strategy.ex"},{line,156}]},{'Elixir.Cluster.Strategy',connect_nodes,4,[{file,"lib/strategy/strategy.ex"},{line,40}]},{'Elixir.Cluster.Strategy.Gossip',handle_heartbeat,2,[{file,"lib/strategy/gossip.ex"},{line,198}]},{'Elixir.Cluster.Strategy.Gossip',handle_info,2,[{file,"lib/strategy/gossip.ex"},{line,140}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: ['Elixir.PC.Cluster.Supervisor','Elixir.PC.Supervisor',<0.311.0>]
+    message_queue_len: 1
+    messages: [{udp,#Port<0.24>,{192,168,1,38},45892,<<104,101,97,114,116,98,101,97,116,58,58,131,116,0,0,0,1,100,0,4,110,111,100,101,100,0,10,97,108,105,99,101,64,109,97,99,50>>}]
+    links: [<0.330.0>,#Port<0.24>]
+    dictionary: [{rand_seed,{#{bits => 58,jump => #Fun<rand.8.10897371>,next => #Fun<rand.5.10897371>,type => exrop,uniform => #Fun<rand.6.10897371>,uniform_n => #Fun<rand.7.10897371>,weak_low_bits => 1},[241555868943331495|88352091440020730]}}]
+    trap_exit: false
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 196852
+  neighbours:
+2018-11-18 21:31:07 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.PC.Cluster.Supervisor'}
+     Context:    child_terminated
+     Reason:     {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"Elixir.PC.list_nodes/0 is undefined!">>},[{'Elixir.Cluster.Strategy','ensure_exported!',3,[{file,"lib/strategy/strategy.ex"},{line,156}]},{'Elixir.Cluster.Strategy',connect_nodes,4,[{file,"lib/strategy/strategy.ex"},{line,40}]},{'Elixir.Cluster.Strategy.Gossip',handle_heartbeat,2,[{file,"lib/strategy/gossip.ex"},{line,198}]},{'Elixir.Cluster.Strategy.Gossip',handle_info,2,[{file,"lib/strategy/gossip.ex"},{line,140}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+     Offender:   [{pid,<0.334.0>},{id,'Elixir.Cluster.Strategy.Gossip'},{mfargs,{'Elixir.Cluster.Strategy.Gossip',start_link,[[#{'__struct__' => 'Elixir.Cluster.Strategy.State',config => [],connect => {'Elixir.PC',connect_node,[]},disconnect => {'Elixir.PC',disconnect_node,[]},list_nodes => {'Elixir.PC',list_nodes,[]},meta => nil,topology => example}]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2018-11-18 21:31:09 =ERROR REPORT====
+** Generic server <0.335.0> terminating 
+** Last message in was {udp,#Port<0.25>,{192,168,1,38},45892,<<104,101,97,114,116,98,101,97,116,58,58,131,116,0,0,0,1,100,0,4,110,111,100,101,100,0,10,97,108,105,99,101,64,109,97,99,50>>}
+** When Server state == #{'__struct__' => 'Elixir.Cluster.Strategy.State',config => [],connect => {'Elixir.PC',connect_node,[]},disconnect => {'Elixir.PC',disconnect_node,[]},list_nodes => {'Elixir.PC',list_nodes,[]},meta => {{230,1,1,251},45892,#Port<0.25>,nil},topology => example}
+** Reason for termination == 
+** {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"Elixir.PC.list_nodes/0 is undefined!">>},[{'Elixir.Cluster.Strategy','ensure_exported!',3,[{file,"lib/strategy/strategy.ex"},{line,156}]},{'Elixir.Cluster.Strategy',connect_nodes,4,[{file,"lib/strategy/strategy.ex"},{line,40}]},{'Elixir.Cluster.Strategy.Gossip',handle_heartbeat,2,[{file,"lib/strategy/gossip.ex"},{line,198}]},{'Elixir.Cluster.Strategy.Gossip',handle_info,2,[{file,"lib/strategy/gossip.ex"},{line,140}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2018-11-18 21:31:09 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Cluster.Strategy.Gossip:init/1
+    pid: <0.335.0>
+    registered_name: []
+    exception error: {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"Elixir.PC.list_nodes/0 is undefined!">>},[{'Elixir.Cluster.Strategy','ensure_exported!',3,[{file,"lib/strategy/strategy.ex"},{line,156}]},{'Elixir.Cluster.Strategy',connect_nodes,4,[{file,"lib/strategy/strategy.ex"},{line,40}]},{'Elixir.Cluster.Strategy.Gossip',handle_heartbeat,2,[{file,"lib/strategy/gossip.ex"},{line,198}]},{'Elixir.Cluster.Strategy.Gossip',handle_info,2,[{file,"lib/strategy/gossip.ex"},{line,140}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: ['Elixir.PC.Cluster.Supervisor','Elixir.PC.Supervisor',<0.311.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.330.0>,#Port<0.25>]
+    dictionary: [{rand_seed,{#{bits => 58,jump => #Fun<rand.8.10897371>,next => #Fun<rand.5.10897371>,type => exrop,uniform => #Fun<rand.6.10897371>,uniform_n => #Fun<rand.7.10897371>,weak_low_bits => 1},[177673575189616171|243778820037102911]}}]
+    trap_exit: false
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 188852
+  neighbours:
+2018-11-18 21:31:09 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.PC.Cluster.Supervisor'}
+     Context:    child_terminated
+     Reason:     {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"Elixir.PC.list_nodes/0 is undefined!">>},[{'Elixir.Cluster.Strategy','ensure_exported!',3,[{file,"lib/strategy/strategy.ex"},{line,156}]},{'Elixir.Cluster.Strategy',connect_nodes,4,[{file,"lib/strategy/strategy.ex"},{line,40}]},{'Elixir.Cluster.Strategy.Gossip',handle_heartbeat,2,[{file,"lib/strategy/gossip.ex"},{line,198}]},{'Elixir.Cluster.Strategy.Gossip',handle_info,2,[{file,"lib/strategy/gossip.ex"},{line,140}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+     Offender:   [{pid,<0.335.0>},{id,'Elixir.Cluster.Strategy.Gossip'},{mfargs,{'Elixir.Cluster.Strategy.Gossip',start_link,[[#{'__struct__' => 'Elixir.Cluster.Strategy.State',config => [],connect => {'Elixir.PC',connect_node,[]},disconnect => {'Elixir.PC',disconnect_node,[]},list_nodes => {'Elixir.PC',list_nodes,[]},meta => nil,topology => example}]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2018-11-18 21:31:11 =ERROR REPORT====
+** Generic server <0.336.0> terminating 
+** Last message in was {udp,#Port<0.26>,{192,168,1,38},45892,<<104,101,97,114,116,98,101,97,116,58,58,131,116,0,0,0,1,100,0,4,110,111,100,101,100,0,10,97,108,105,99,101,64,109,97,99,50>>}
+** When Server state == #{'__struct__' => 'Elixir.Cluster.Strategy.State',config => [],connect => {'Elixir.PC',connect_node,[]},disconnect => {'Elixir.PC',disconnect_node,[]},list_nodes => {'Elixir.PC',list_nodes,[]},meta => {{230,1,1,251},45892,#Port<0.26>,nil},topology => example}
+** Reason for termination == 
+** {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"Elixir.PC.list_nodes/0 is undefined!">>},[{'Elixir.Cluster.Strategy','ensure_exported!',3,[{file,"lib/strategy/strategy.ex"},{line,156}]},{'Elixir.Cluster.Strategy',connect_nodes,4,[{file,"lib/strategy/strategy.ex"},{line,40}]},{'Elixir.Cluster.Strategy.Gossip',handle_heartbeat,2,[{file,"lib/strategy/gossip.ex"},{line,198}]},{'Elixir.Cluster.Strategy.Gossip',handle_info,2,[{file,"lib/strategy/gossip.ex"},{line,140}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2018-11-18 21:31:11 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Cluster.Strategy.Gossip:init/1
+    pid: <0.336.0>
+    registered_name: []
+    exception error: {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"Elixir.PC.list_nodes/0 is undefined!">>},[{'Elixir.Cluster.Strategy','ensure_exported!',3,[{file,"lib/strategy/strategy.ex"},{line,156}]},{'Elixir.Cluster.Strategy',connect_nodes,4,[{file,"lib/strategy/strategy.ex"},{line,40}]},{'Elixir.Cluster.Strategy.Gossip',handle_heartbeat,2,[{file,"lib/strategy/gossip.ex"},{line,198}]},{'Elixir.Cluster.Strategy.Gossip',handle_info,2,[{file,"lib/strategy/gossip.ex"},{line,140}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: ['Elixir.PC.Cluster.Supervisor','Elixir.PC.Supervisor',<0.311.0>]
+    message_queue_len: 1
+    messages: [{udp,#Port<0.26>,{192,168,1,38},45892,<<104,101,97,114,116,98,101,97,116,58,58,131,116,0,0,0,1,100,0,4,110,111,100,101,100,0,10,97,108,105,99,101,64,109,97,99,50>>}]
+    links: [<0.330.0>,#Port<0.26>]
+    dictionary: [{rand_seed,{#{bits => 58,jump => #Fun<rand.8.10897371>,next => #Fun<rand.5.10897371>,type => exrop,uniform => #Fun<rand.6.10897371>,uniform_n => #Fun<rand.7.10897371>,weak_low_bits => 1},[135447114170116167|206138014398530362]}}]
+    trap_exit: false
+    status: running
+    heap_size: 6772
+    stack_size: 27
+    reductions: 197172
+  neighbours:
+2018-11-18 21:31:11 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.PC.Cluster.Supervisor'}
+     Context:    child_terminated
+     Reason:     {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"Elixir.PC.list_nodes/0 is undefined!">>},[{'Elixir.Cluster.Strategy','ensure_exported!',3,[{file,"lib/strategy/strategy.ex"},{line,156}]},{'Elixir.Cluster.Strategy',connect_nodes,4,[{file,"lib/strategy/strategy.ex"},{line,40}]},{'Elixir.Cluster.Strategy.Gossip',handle_heartbeat,2,[{file,"lib/strategy/gossip.ex"},{line,198}]},{'Elixir.Cluster.Strategy.Gossip',handle_info,2,[{file,"lib/strategy/gossip.ex"},{line,140}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+     Offender:   [{pid,<0.336.0>},{id,'Elixir.Cluster.Strategy.Gossip'},{mfargs,{'Elixir.Cluster.Strategy.Gossip',start_link,[[#{'__struct__' => 'Elixir.Cluster.Strategy.State',config => [],connect => {'Elixir.PC',connect_node,[]},disconnect => {'Elixir.PC',disconnect_node,[]},list_nodes => {'Elixir.PC',list_nodes,[]},meta => nil,topology => example}]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2018-11-18 21:31:11 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.PC.Cluster.Supervisor'}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.336.0>},{id,'Elixir.Cluster.Strategy.Gossip'},{mfargs,{'Elixir.Cluster.Strategy.Gossip',start_link,[[#{'__struct__' => 'Elixir.Cluster.Strategy.State',config => [],connect => {'Elixir.PC',connect_node,[]},disconnect => {'Elixir.PC',disconnect_node,[]},list_nodes => {'Elixir.PC',list_nodes,[]},meta => nil,topology => example}]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2018-11-18 21:31:11 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.PC.Supervisor'}
+     Context:    child_terminated
+     Reason:     shutdown
+     Offender:   [{pid,<0.330.0>},{id,'Elixir.Cluster.Supervisor'},{mfargs,{'Elixir.Cluster.Supervisor',start_link,[[[{example,[{strategy,'Elixir.Cluster.Strategy.Gossip'},{connect,{'Elixir.PC',connect_node,[]}},{disconnect,{'Elixir.PC',disconnect_node,[]}},{list_nodes,{'Elixir.PC',list_nodes,[]}}]}],[{name,'Elixir.PC.Cluster.Supervisor'}]]]}},{restart_type,permanent},{shutdown,infinity},{child_type,supervisor}]
+
+2018-11-18 21:31:11 =ERROR REPORT====
+** Generic server <0.338.0> terminating 
+** Last message in was {udp,#Port<0.27>,{192,168,1,38},45892,<<104,101,97,114,116,98,101,97,116,58,58,131,116,0,0,0,1,100,0,4,110,111,100,101,100,0,10,97,108,105,99,101,64,109,97,99,50>>}
+** When Server state == #{'__struct__' => 'Elixir.Cluster.Strategy.State',config => [],connect => {'Elixir.PC',connect_node,[]},disconnect => {'Elixir.PC',disconnect_node,[]},list_nodes => {'Elixir.PC',list_nodes,[]},meta => {{230,1,1,251},45892,#Port<0.27>,nil},topology => example}
+** Reason for termination == 
+** {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"Elixir.PC.list_nodes/0 is undefined!">>},[{'Elixir.Cluster.Strategy','ensure_exported!',3,[{file,"lib/strategy/strategy.ex"},{line,156}]},{'Elixir.Cluster.Strategy',connect_nodes,4,[{file,"lib/strategy/strategy.ex"},{line,40}]},{'Elixir.Cluster.Strategy.Gossip',handle_heartbeat,2,[{file,"lib/strategy/gossip.ex"},{line,198}]},{'Elixir.Cluster.Strategy.Gossip',handle_info,2,[{file,"lib/strategy/gossip.ex"},{line,140}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2018-11-18 21:31:11 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Cluster.Strategy.Gossip:init/1
+    pid: <0.338.0>
+    registered_name: []
+    exception error: {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"Elixir.PC.list_nodes/0 is undefined!">>},[{'Elixir.Cluster.Strategy','ensure_exported!',3,[{file,"lib/strategy/strategy.ex"},{line,156}]},{'Elixir.Cluster.Strategy',connect_nodes,4,[{file,"lib/strategy/strategy.ex"},{line,40}]},{'Elixir.Cluster.Strategy.Gossip',handle_heartbeat,2,[{file,"lib/strategy/gossip.ex"},{line,198}]},{'Elixir.Cluster.Strategy.Gossip',handle_info,2,[{file,"lib/strategy/gossip.ex"},{line,140}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: ['Elixir.PC.Cluster.Supervisor','Elixir.PC.Supervisor',<0.311.0>]
+    message_queue_len: 1
+    messages: [{udp,#Port<0.27>,{192,168,1,38},45892,<<104,101,97,114,116,98,101,97,116,58,58,131,116,0,0,0,1,100,0,4,110,111,100,101,100,0,10,97,108,105,99,101,64,109,97,99,50>>}]
+    links: [<0.337.0>,#Port<0.27>]
+    dictionary: [{rand_seed,{#{bits => 58,jump => #Fun<rand.8.10897371>,next => #Fun<rand.5.10897371>,type => exrop,uniform => #Fun<rand.6.10897371>,uniform_n => #Fun<rand.7.10897371>,weak_low_bits => 1},[114078652493738498|185377738107826600]}}]
+    trap_exit: false
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 184852
+  neighbours:
+2018-11-18 21:31:11 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.PC.Cluster.Supervisor'}
+     Context:    child_terminated
+     Reason:     {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"Elixir.PC.list_nodes/0 is undefined!">>},[{'Elixir.Cluster.Strategy','ensure_exported!',3,[{file,"lib/strategy/strategy.ex"},{line,156}]},{'Elixir.Cluster.Strategy',connect_nodes,4,[{file,"lib/strategy/strategy.ex"},{line,40}]},{'Elixir.Cluster.Strategy.Gossip',handle_heartbeat,2,[{file,"lib/strategy/gossip.ex"},{line,198}]},{'Elixir.Cluster.Strategy.Gossip',handle_info,2,[{file,"lib/strategy/gossip.ex"},{line,140}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+     Offender:   [{pid,<0.338.0>},{id,'Elixir.Cluster.Strategy.Gossip'},{mfargs,{'Elixir.Cluster.Strategy.Gossip',start_link,[[#{'__struct__' => 'Elixir.Cluster.Strategy.State',config => [],connect => {'Elixir.PC',connect_node,[]},disconnect => {'Elixir.PC',disconnect_node,[]},list_nodes => {'Elixir.PC',list_nodes,[]},meta => nil,topology => example}]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2018-11-18 21:31:12 =ERROR REPORT====
+** Generic server <0.339.0> terminating 
+** Last message in was {udp,#Port<0.28>,{192,168,1,38},45892,<<104,101,97,114,116,98,101,97,116,58,58,131,116,0,0,0,1,100,0,4,110,111,100,101,100,0,10,97,108,105,99,101,64,109,97,99,50>>}
+** When Server state == #{'__struct__' => 'Elixir.Cluster.Strategy.State',config => [],connect => {'Elixir.PC',connect_node,[]},disconnect => {'Elixir.PC',disconnect_node,[]},list_nodes => {'Elixir.PC',list_nodes,[]},meta => {{230,1,1,251},45892,#Port<0.28>,nil},topology => example}
+** Reason for termination == 
+** {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"Elixir.PC.list_nodes/0 is undefined!">>},[{'Elixir.Cluster.Strategy','ensure_exported!',3,[{file,"lib/strategy/strategy.ex"},{line,156}]},{'Elixir.Cluster.Strategy',connect_nodes,4,[{file,"lib/strategy/strategy.ex"},{line,40}]},{'Elixir.Cluster.Strategy.Gossip',handle_heartbeat,2,[{file,"lib/strategy/gossip.ex"},{line,198}]},{'Elixir.Cluster.Strategy.Gossip',handle_info,2,[{file,"lib/strategy/gossip.ex"},{line,140}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2018-11-18 21:31:12 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Cluster.Strategy.Gossip:init/1
+    pid: <0.339.0>
+    registered_name: []
+    exception error: {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"Elixir.PC.list_nodes/0 is undefined!">>},[{'Elixir.Cluster.Strategy','ensure_exported!',3,[{file,"lib/strategy/strategy.ex"},{line,156}]},{'Elixir.Cluster.Strategy',connect_nodes,4,[{file,"lib/strategy/strategy.ex"},{line,40}]},{'Elixir.Cluster.Strategy.Gossip',handle_heartbeat,2,[{file,"lib/strategy/gossip.ex"},{line,198}]},{'Elixir.Cluster.Strategy.Gossip',handle_info,2,[{file,"lib/strategy/gossip.ex"},{line,140}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: ['Elixir.PC.Cluster.Supervisor','Elixir.PC.Supervisor',<0.311.0>]
+    message_queue_len: 1
+    messages: [{udp,#Port<0.28>,{192,168,1,38},45892,<<104,101,97,114,116,98,101,97,116,58,58,131,116,0,0,0,1,100,0,4,110,111,100,101,100,0,10,97,108,105,99,101,64,109,97,99,50>>}]
+    links: [<0.337.0>,#Port<0.28>]
+    dictionary: [{rand_seed,{#{bits => 58,jump => #Fun<rand.8.10897371>,next => #Fun<rand.5.10897371>,type => exrop,uniform => #Fun<rand.6.10897371>,uniform_n => #Fun<rand.7.10897371>,weak_low_bits => 1},[197683534183156888|133481360893219008]}}]
+    trap_exit: false
+    status: running
+    heap_size: 6772
+    stack_size: 27
+    reductions: 193016
+  neighbours:
+2018-11-18 21:31:12 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.PC.Cluster.Supervisor'}
+     Context:    child_terminated
+     Reason:     {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"Elixir.PC.list_nodes/0 is undefined!">>},[{'Elixir.Cluster.Strategy','ensure_exported!',3,[{file,"lib/strategy/strategy.ex"},{line,156}]},{'Elixir.Cluster.Strategy',connect_nodes,4,[{file,"lib/strategy/strategy.ex"},{line,40}]},{'Elixir.Cluster.Strategy.Gossip',handle_heartbeat,2,[{file,"lib/strategy/gossip.ex"},{line,198}]},{'Elixir.Cluster.Strategy.Gossip',handle_info,2,[{file,"lib/strategy/gossip.ex"},{line,140}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+     Offender:   [{pid,<0.339.0>},{id,'Elixir.Cluster.Strategy.Gossip'},{mfargs,{'Elixir.Cluster.Strategy.Gossip',start_link,[[#{'__struct__' => 'Elixir.Cluster.Strategy.State',config => [],connect => {'Elixir.PC',connect_node,[]},disconnect => {'Elixir.PC',disconnect_node,[]},list_nodes => {'Elixir.PC',list_nodes,[]},meta => nil,topology => example}]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2018-11-18 21:31:17 =ERROR REPORT====
+** Generic server <0.340.0> terminating 
+** Last message in was {udp,#Port<0.29>,{192,168,1,38},45892,<<104,101,97,114,116,98,101,97,116,58,58,131,116,0,0,0,1,100,0,4,110,111,100,101,100,0,10,97,108,105,99,101,64,109,97,99,50>>}
+** When Server state == #{'__struct__' => 'Elixir.Cluster.Strategy.State',config => [],connect => {'Elixir.PC',connect_node,[]},disconnect => {'Elixir.PC',disconnect_node,[]},list_nodes => {'Elixir.PC',list_nodes,[]},meta => {{230,1,1,251},45892,#Port<0.29>,nil},topology => example}
+** Reason for termination == 
+** {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"Elixir.PC.list_nodes/0 is undefined!">>},[{'Elixir.Cluster.Strategy','ensure_exported!',3,[{file,"lib/strategy/strategy.ex"},{line,156}]},{'Elixir.Cluster.Strategy',connect_nodes,4,[{file,"lib/strategy/strategy.ex"},{line,40}]},{'Elixir.Cluster.Strategy.Gossip',handle_heartbeat,2,[{file,"lib/strategy/gossip.ex"},{line,198}]},{'Elixir.Cluster.Strategy.Gossip',handle_info,2,[{file,"lib/strategy/gossip.ex"},{line,140}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2018-11-18 21:31:17 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Cluster.Strategy.Gossip:init/1
+    pid: <0.340.0>
+    registered_name: []
+    exception error: {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"Elixir.PC.list_nodes/0 is undefined!">>},[{'Elixir.Cluster.Strategy','ensure_exported!',3,[{file,"lib/strategy/strategy.ex"},{line,156}]},{'Elixir.Cluster.Strategy',connect_nodes,4,[{file,"lib/strategy/strategy.ex"},{line,40}]},{'Elixir.Cluster.Strategy.Gossip',handle_heartbeat,2,[{file,"lib/strategy/gossip.ex"},{line,198}]},{'Elixir.Cluster.Strategy.Gossip',handle_info,2,[{file,"lib/strategy/gossip.ex"},{line,140}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: ['Elixir.PC.Cluster.Supervisor','Elixir.PC.Supervisor',<0.311.0>]
+    message_queue_len: 1
+    messages: [{udp,#Port<0.29>,{192,168,1,38},45892,<<104,101,97,114,116,98,101,97,116,58,58,131,116,0,0,0,1,100,0,4,110,111,100,101,100,0,10,97,108,105,99,101,64,109,97,99,50>>}]
+    links: [<0.337.0>,#Port<0.29>]
+    dictionary: [{rand_seed,{#{bits => 58,jump => #Fun<rand.8.10897371>,next => #Fun<rand.5.10897371>,type => exrop,uniform => #Fun<rand.6.10897371>,uniform_n => #Fun<rand.7.10897371>,weak_low_bits => 1},[279968651953966860|44687370294734511]}}]
+    trap_exit: false
+    status: running
+    heap_size: 6772
+    stack_size: 27
+    reductions: 189329
+  neighbours:
+2018-11-18 21:31:17 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.PC.Cluster.Supervisor'}
+     Context:    child_terminated
+     Reason:     {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"Elixir.PC.list_nodes/0 is undefined!">>},[{'Elixir.Cluster.Strategy','ensure_exported!',3,[{file,"lib/strategy/strategy.ex"},{line,156}]},{'Elixir.Cluster.Strategy',connect_nodes,4,[{file,"lib/strategy/strategy.ex"},{line,40}]},{'Elixir.Cluster.Strategy.Gossip',handle_heartbeat,2,[{file,"lib/strategy/gossip.ex"},{line,198}]},{'Elixir.Cluster.Strategy.Gossip',handle_info,2,[{file,"lib/strategy/gossip.ex"},{line,140}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+     Offender:   [{pid,<0.340.0>},{id,'Elixir.Cluster.Strategy.Gossip'},{mfargs,{'Elixir.Cluster.Strategy.Gossip',start_link,[[#{'__struct__' => 'Elixir.Cluster.Strategy.State',config => [],connect => {'Elixir.PC',connect_node,[]},disconnect => {'Elixir.PC',disconnect_node,[]},list_nodes => {'Elixir.PC',list_nodes,[]},meta => nil,topology => example}]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2018-11-18 21:31:19 =ERROR REPORT====
+** Generic server <0.342.0> terminating 
+** Last message in was {udp,#Port<0.30>,{192,168,1,38},45892,<<104,101,97,114,116,98,101,97,116,58,58,131,116,0,0,0,1,100,0,4,110,111,100,101,100,0,10,97,108,105,99,101,64,109,97,99,50>>}
+** When Server state == #{'__struct__' => 'Elixir.Cluster.Strategy.State',config => [],connect => {'Elixir.PC',connect_node,[]},disconnect => {'Elixir.PC',disconnect_node,[]},list_nodes => {'Elixir.PC',list_nodes,[]},meta => {{230,1,1,251},45892,#Port<0.30>,nil},topology => example}
+** Reason for termination == 
+** {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"Elixir.PC.list_nodes/0 is undefined!">>},[{'Elixir.Cluster.Strategy','ensure_exported!',3,[{file,"lib/strategy/strategy.ex"},{line,156}]},{'Elixir.Cluster.Strategy',connect_nodes,4,[{file,"lib/strategy/strategy.ex"},{line,40}]},{'Elixir.Cluster.Strategy.Gossip',handle_heartbeat,2,[{file,"lib/strategy/gossip.ex"},{line,198}]},{'Elixir.Cluster.Strategy.Gossip',handle_info,2,[{file,"lib/strategy/gossip.ex"},{line,140}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+2018-11-18 21:31:19 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Cluster.Strategy.Gossip:init/1
+    pid: <0.342.0>
+    registered_name: []
+    exception error: {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"Elixir.PC.list_nodes/0 is undefined!">>},[{'Elixir.Cluster.Strategy','ensure_exported!',3,[{file,"lib/strategy/strategy.ex"},{line,156}]},{'Elixir.Cluster.Strategy',connect_nodes,4,[{file,"lib/strategy/strategy.ex"},{line,40}]},{'Elixir.Cluster.Strategy.Gossip',handle_heartbeat,2,[{file,"lib/strategy/gossip.ex"},{line,198}]},{'Elixir.Cluster.Strategy.Gossip',handle_info,2,[{file,"lib/strategy/gossip.ex"},{line,140}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: ['Elixir.PC.Cluster.Supervisor','Elixir.PC.Supervisor',<0.311.0>]
+    message_queue_len: 1
+    messages: [{udp,#Port<0.30>,{192,168,1,38},45892,<<104,101,97,114,116,98,101,97,116,58,58,131,116,0,0,0,1,100,0,4,110,111,100,101,100,0,10,97,108,105,99,101,64,109,97,99,50>>}]
+    links: [<0.337.0>,#Port<0.30>]
+    dictionary: [{rand_seed,{#{bits => 58,jump => #Fun<rand.8.10897371>,next => #Fun<rand.5.10897371>,type => exrop,uniform => #Fun<rand.6.10897371>,uniform_n => #Fun<rand.7.10897371>,weak_low_bits => 1},[150125270521226321|274968339812631103]}}]
+    trap_exit: false
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 188852
+  neighbours:
+2018-11-18 21:31:19 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.PC.Cluster.Supervisor'}
+     Context:    child_terminated
+     Reason:     {#{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"Elixir.PC.list_nodes/0 is undefined!">>},[{'Elixir.Cluster.Strategy','ensure_exported!',3,[{file,"lib/strategy/strategy.ex"},{line,156}]},{'Elixir.Cluster.Strategy',connect_nodes,4,[{file,"lib/strategy/strategy.ex"},{line,40}]},{'Elixir.Cluster.Strategy.Gossip',handle_heartbeat,2,[{file,"lib/strategy/gossip.ex"},{line,198}]},{'Elixir.Cluster.Strategy.Gossip',handle_info,2,[{file,"lib/strategy/gossip.ex"},{line,140}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]},{gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,711}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+     Offender:   [{pid,<0.342.0>},{id,'Elixir.Cluster.Strategy.Gossip'},{mfargs,{'Elixir.Cluster.Strategy.Gossip',start_link,[[#{'__struct__' => 'Elixir.Cluster.Strategy.State',config => [],connect => {'Elixir.PC',connect_node,[]},disconnect => {'Elixir.PC',disconnect_node,[]},list_nodes => {'Elixir.PC',list_nodes,[]},meta => nil,topology => example}]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
